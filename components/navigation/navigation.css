@@ -37,3 +37,8 @@
 .navigation__link svg {
   fill: currentcolor;
 }
+
+.style {
+  fill: transparent;
+  stroke: white;
+}
