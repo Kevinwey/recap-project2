@@ -28,6 +28,9 @@
   font-style: italic;
   display: none;
 }
+.card--showAnswer {
+  display: block;
+}
 
 .card__answer--active {
   display: block;
