@@ -4,12 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Quiz App</title>
   </head>
   <body>
     <header class="header">
       <h1 class="header__title">Quiz-App</h1>
     </header>
+
+    <main>
+      <fieldset>
+        <form>
+          <label for="question">Your Question:</label>
+          <textarea
+            name="question"
+            id="question"
+            rows="10"
+            cols="50"
+          ></textarea>
+        </form>
+      </fieldset>
+    </main>
 
     <nav class="navigation">
       <ul class="navigation__list">
