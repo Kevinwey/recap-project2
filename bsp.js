@@ -30,7 +30,7 @@ function addQuestion(data) {
   card.classList.add("card");
   question.classList.add("card__question");
   button.classList.add("card__button-answer");
-  answer.classList.add("card_answer");
+  answer.classList.add("card__answer");
   tagList.classList.add("card__tag-list");
   tag.classList.add("card__tag-list-item");
   bookmark.classList.add("card__button-bookmark");
