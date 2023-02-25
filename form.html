@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./index.js" defer></script>
+    <script src="./bsp.js" defer></script>
     <link rel="stylesheet" href="./styles.css" />
     <title>Quiz App</title>
   </head>
@@ -15,7 +15,7 @@
 
     <main>
       <fieldset>
-        <form>
+        <form data-js="form">
           <label for="question">Your Question:</label>
           <textarea
             name="question"
@@ -30,11 +30,12 @@
           <button type="submit">Add Card</button>
         </form>
       </fieldset>
+      <ul data-js="questionCard" class="card-list"></ul>
     </main>
 
     <nav class="navigation">
       <ul class="navigation__list">
-        <li class="navigation__list-item navigation__list-item--active">
+        <li class="navigation__list-item">
           <a
             class="navigation__link"
             href="/index.html"
@@ -70,7 +71,7 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
+        <li class="navigation__list-item navigation__list-item--active">
           <a
             class="navigation__link"
             href="/form.html"
