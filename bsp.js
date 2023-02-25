@@ -7,7 +7,9 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
   addQuestion(data);
-  console.log(data);
+
+  event.target.question.focus();
+  form.reset();
 });
 
 function addQuestion(data) {
