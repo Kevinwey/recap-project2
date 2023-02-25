@@ -10,23 +10,6 @@ form.addEventListener("submit", (event) => {
 
   event.target.question.focus();
   form.reset();
-  const bookmark = document.querySelector(".bookmark");
-
-  bookmark.addEventListener("click", () => {
-    bookmark.classList.toggle("bookmark--active");
-  });
-
-  const answerButton = document.querySelector(".card__button-answer");
-  const answer = document.querySelector(".card__answer");
-
-  answerButton.addEventListener("click", () => {
-    if (answer.classList.contains("card__answer") === true) {
-      answerButton.textContent = "Show Answer";
-    } else {
-      answerButton.textContent = "Hide Answer";
-    }
-    answer.classList.toggle("card__answer");
-  });
 });
 
 function addQuestion(data) {
@@ -65,6 +48,19 @@ function addQuestion(data) {
   button.textContent = "Show Answer";
   answer.textContent = data.answer;
   tag.textContent = `# ${data.tag}`;
+
+  bookmarkButton.addEventListener("click", () => {
+    bookmarkButton.classList.toggle("bookmark--active");
+  });
+
+  button.addEventListener("click", () => {
+    if (answer.classList.contains("card__answer") === true) {
+      button.textContent = "Show Answer";
+    } else {
+      button.textContent = "Hide Answer";
+    }
+    answer.classList.toggle("card__answer");
+  });
 
   iconSvg.appendChild(iconPath);
   bookmarkButton.append(iconSvg);
