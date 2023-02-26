@@ -1,5 +1,10 @@
 const form = document.querySelector('[data-js="form"]');
 const cardQuestion = document.querySelector('[data-js="questionCard"]');
+const questionElement = document.querySelector('[data-js="question"]');
+const answerElement = document.querySelector('[data-js="answer"]');
+const amountLeft1 = document.querySelector('[data-js="amountLeft1"]');
+const amountLeft2 = document.querySelector('[data-js="amountLeft2"]');
+const maxLength = questionElement.getAttribute("maxlength");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -71,9 +76,21 @@ function addQuestion(data) {
   cardQuestion.append(cardList);
 }
 
-/* 
+const updateAmountLeft = (length) => {
+  amountLeft1.textContent = length;
+};
 
-  */
+const updateAmountLeft2 = (length) => {
+  amountLeft2.textContent = length;
+};
+
+questionElement.addEventListener("input", () => {
+  updateAmountLeft(maxLength - questionElement.value.length);
+});
+
+answerElement.addEventListener("input", () => {
+  updateAmountLeft2(maxLength - answerElement.value.length);
+});
 
 /* `<article class="card">
   <h2 class="card__question">
