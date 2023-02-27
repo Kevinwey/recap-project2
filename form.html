@@ -18,13 +18,24 @@
         <form data-js="form">
           <label for="question">Your Question:</label>
           <textarea
+            data-js="question"
+            maxlength="150"
             name="question"
             id="question"
             rows="10"
             cols="50"
           ></textarea>
+          <small>(<span data-js="amountLeft1"></span> characters left)</small>
           <label for="answer">Your Answer:</label>
-          <textarea name="answer" id="answer" rows="5" cols="50"></textarea>
+          <textarea
+            data-js="answer"
+            maxlength="150"
+            name="answer"
+            id="answer"
+            rows="5"
+            cols="50"
+          ></textarea>
+          <small>(<span data-js="amountLeft2"></span> characters left)</small>
           <label for="tag">Tag:</label>
           <input type="text" name="tag" id="tag" />
           <button type="submit">Add Card</button>
